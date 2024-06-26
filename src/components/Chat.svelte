@@ -46,7 +46,7 @@
     };
 </script>
 
-<div class="grid grid-cols-2">
+<div class="grid grid-cols-2 gap-10">
     <div>
         <div class="grid grid-cols-2 gap-2">
             {#each images as image}
@@ -75,10 +75,10 @@
         {/if}
     </div>
 
-    {#if answer}
-        <div class="mx-5 mt-8 mb-10 flex justify-center items-center flex-col text-white">
-            <p class="font-bold size-4">Answer:</p>
-            <p>{answer}</p>
-        </div>
-    {/if}
+    <div class="p-5 border-2 border-amber-800 rounded-md">
+        <p class="font-bold text-lg text-white">Answer:</p>
+        {#if answer}
+            <p class="text-white text-justify">{answer}</p>
+        {/if}
+    </div>
 </div>
